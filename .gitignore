@@ -1,0 +1,8 @@
+obj/
+bin/
+.vscode/
+images/
+localconfig/
+deploy.zip
+output.txt
+input.txt
