@@ -21,7 +21,17 @@ namespace FantasyCharacterBot
 
             Console.WriteLine("Beginning program");
 
-            Console.WriteLine(NameGenerator.GetFullName());
+            Console.WriteLine(String.Format(
+                "Name: {0}\n"
+                + "Look:\n" // TODO: face + clothing
+                + "Sign:\n"
+                + "Specialty:\n"
+                + "Familiar:\n"
+                + "Likes:\n"
+                + "Dislikes:\n"
+                + "Inventory:\n"
+                + "Home:\n",
+                NameGenerator.GetFullName() ));
         }
 
         static void InitializeTwitterCredentials()
