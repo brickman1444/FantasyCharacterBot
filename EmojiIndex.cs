@@ -13,6 +13,7 @@ namespace FantasyCharacterBot
         {
             Face = 1 << 0,
             Clothing = 1 << 1,
+            Sign = 1 << 2,
         }
 
         public static string GetRandomEmoji(EmojiFlags flags)
@@ -54,6 +55,39 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.Clothing.TopHat, EmojiFlags.Clothing ),
             new EmojiEntry( Emoji.Clothing.WomanBoot, EmojiFlags.Clothing ),
             new EmojiEntry( Emoji.Clothing.Gloves, EmojiFlags.Clothing ),
+
+            new EmojiEntry( Emoji.Zodiac.Aquarius, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Aries, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Cancer, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Capricorn, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Gemini, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Leo, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Libra, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Ophiuchus, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Pisces, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Sagittarius, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Scorpius, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Taurus, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Zodiac.Virgo, EmojiFlags.Sign ),
+
+            new EmojiEntry( Emoji.AnimalMammal.Rat, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Ox, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Tiger, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Rabbit, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalReptile.Dragon, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalReptile.Snake, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Horse, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Goat, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Monkey, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalBird.Rooster, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Dog, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Pig, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Cat, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalReptile.Turtle, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Elephant, EmojiFlags.Sign ),
+
+            new EmojiEntry( Emoji.SkyAndWeather.Fire, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign ),
         };
     }
 }
