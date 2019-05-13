@@ -14,6 +14,7 @@ namespace FantasyCharacterBot
             Face = 1 << 0,
             Clothing = 1 << 1,
             Sign = 1 << 2,
+            Specialty = 1 << 3,
         }
 
         public static string GetRandomEmoji(EmojiFlags flags)
@@ -88,6 +89,23 @@ namespace FantasyCharacterBot
 
             new EmojiEntry( Emoji.SkyAndWeather.Fire, EmojiFlags.Sign ),
             new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign ),
+
+            new EmojiEntry( Emoji.Tool.BowAndArrow, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.CrossedSwords, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.Dagger, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.Pistol, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.Shield, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.Axe, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.Pick, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Tool.Toolbox, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.Banjo, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.Drum, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.Saxophone, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.Violin, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.MusicalKeyboard, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.Trumpet, EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.MusicalInstrument.Guitar, EmojiFlags.Specialty ),
+
         };
     }
 }
