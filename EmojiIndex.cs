@@ -50,6 +50,15 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.PersonFantasy.Mage, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Fairy, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Genie, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.CatFace.Grinning, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.Person.OlderAdult, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonRole.BeardedPerson, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonRole.PersonWearingTurban, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonRole.Prince, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonRole.Princess, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonRole.WomanHeadscarf, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonRole.BlondHairedPerson, EmojiFlags.Face ),
+
             new EmojiEntry( Emoji.Clothing.BalletShoes, EmojiFlags.Clothing | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Clothing.Coat, EmojiFlags.Clothing | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Clothing.Crown, EmojiFlags.Clothing | EmojiFlags.Inventory ),
@@ -91,7 +100,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.AnimalReptile.Turtle, EmojiFlags.Sign | EmojiFlags.Familiar | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.AnimalMammal.Elephant, EmojiFlags.Sign | EmojiFlags.Familiar | EmojiFlags.Likes ),
 
-            new EmojiEntry( Emoji.AnimalMammal.UnicornFace, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.UnicornFace, EmojiFlags.Familiar | EmojiFlags.Face ),
             new EmojiEntry( Emoji.AnimalMammal.Skunk, EmojiFlags.Familiar ),
             new EmojiEntry( Emoji.AnimalMammal.Badger, EmojiFlags.Familiar ),
             new EmojiEntry( Emoji.AnimalMammal.Bat, EmojiFlags.Familiar | EmojiFlags.Inventory ),
@@ -120,7 +129,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.MusicalInstrument.MusicalKeyboard, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Trumpet, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Guitar, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
-            new EmojiEntry( Emoji.OtherSymbols.Sparkle, EmojiFlags.Specialty );
+            new EmojiEntry( Emoji.OtherSymbols.Sparkle, EmojiFlags.Specialty ),
 
             new EmojiEntry( Emoji.FoodAsian.BentoBox, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.FoodAsian.CookedRice, EmojiFlags.Likes | EmojiFlags.Inventory ),
