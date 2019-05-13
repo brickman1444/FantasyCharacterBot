@@ -30,7 +30,7 @@ namespace FantasyCharacterBot
                 + "Likes:{6}{7}{8}\n"
                 + "Dislikes:{9}{10}{11}\n"
                 + "Inventory:{12}{13}{14}{15}\n"
-                + "Home:\n",
+                + "Home:{16}\n",
                 NameGenerator.GetFullName(),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Face),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Clothing),
@@ -46,7 +46,8 @@ namespace FantasyCharacterBot
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory) ));
+                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
+                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Home) ));
         }
 
         static void InitializeTwitterCredentials()

@@ -18,6 +18,7 @@ namespace FantasyCharacterBot
             Familiar = 1 << 4,
             Likes = 1 << 5,
             Inventory = 1 << 6,
+            Home = 1 << 7,
         }
 
         public static string GetRandomEmoji(EmojiFlags flags)
@@ -101,7 +102,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.AnimalMammal.FoxFace, EmojiFlags.Familiar ),
 
             new EmojiEntry( Emoji.SkyAndWeather.Fire, EmojiFlags.Sign | EmojiFlags.Likes ),
-            new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign | EmojiFlags.Likes ),
+            new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign | EmojiFlags.Likes | EmojiFlags.Home ),
             new EmojiEntry( Emoji.Emotion.DashingAway, EmojiFlags.Sign | EmojiFlags.Likes ),
 
             new EmojiEntry( Emoji.Tool.BowAndArrow, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
@@ -119,6 +120,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.MusicalInstrument.MusicalKeyboard, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Trumpet, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Guitar, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.OtherSymbols.Sparkle, EmojiFlags.Specialty );
 
             new EmojiEntry( Emoji.FoodAsian.BentoBox, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.FoodAsian.CookedRice, EmojiFlags.Likes | EmojiFlags.Inventory ),
@@ -145,6 +147,26 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.BookPaper.BlueBook, EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.BookPaper.Ledger, EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.BookPaper.Scroll, EmojiFlags.Inventory ),
+
+            new EmojiEntry( Emoji.SkyAndWeather.Sun, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.SkyAndWeather.CrescentMoon, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceOther.CircusTent, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceGeographic.BeachWithUmbrella, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceGeographic.Desert, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceGeographic.DesertIsland, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceGeographic.Mountain, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceGeographic.SnowCappedMountain, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceGeographic.Volcano, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.Castle, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.JapaneseCastle, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.DerelictHouse, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.Building, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceOther.MilkyWay, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceOther.Tent, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.Cityscape, EmojiFlags.Home ),
+
+            new EmojiEntry( Emoji.TransportWater.Sailboat, EmojiFlags.Home ),
+
         };
     }
 }
