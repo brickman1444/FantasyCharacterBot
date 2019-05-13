@@ -15,6 +15,7 @@ namespace FantasyCharacterBot
             Clothing = 1 << 1,
             Sign = 1 << 2,
             Specialty = 1 << 3,
+            Familiar = 1 << 4,
         }
 
         public static string GetRandomEmoji(EmojiFlags flags)
@@ -71,22 +72,36 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.Zodiac.Taurus, EmojiFlags.Sign ),
             new EmojiEntry( Emoji.Zodiac.Virgo, EmojiFlags.Sign ),
 
-            new EmojiEntry( Emoji.AnimalMammal.Rat, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Ox, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Tiger, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Rabbit, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalReptile.Dragon, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalReptile.Snake, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Horse, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Goat, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Monkey, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalBird.Rooster, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Dog, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Pig, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Cat, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalReptile.Turtle, EmojiFlags.Sign ),
-            new EmojiEntry( Emoji.AnimalMammal.Elephant, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.AnimalMammal.Rat, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Ox, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Tiger, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Rabbit, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalReptile.Dragon, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalReptile.Snake, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Horse, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Goat, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Monkey, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalBird.Rooster, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Dog, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Pig, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Cat, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalReptile.Turtle, EmojiFlags.Sign | EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Elephant, EmojiFlags.Sign | EmojiFlags.Familiar ),
 
+            new EmojiEntry( Emoji.AnimalMammal.UnicornFace, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Skunk, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Badger, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Bat, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.BearFace, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Camel, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Cow, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.Deer, EmojiFlags.Familiar ),
+            new EmojiEntry( Emoji.AnimalMammal.FoxFace, EmojiFlags.Familiar ),
+
+            new EmojiEntry( Emoji.SkyAndWeather.Fire, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.Emotion.DashingAway, EmojiFlags.Sign ),
+            
             new EmojiEntry( Emoji.SkyAndWeather.Fire, EmojiFlags.Sign ),
             new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign ),
 
@@ -105,6 +120,8 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.MusicalInstrument.MusicalKeyboard, EmojiFlags.Specialty ),
             new EmojiEntry( Emoji.MusicalInstrument.Trumpet, EmojiFlags.Specialty ),
             new EmojiEntry( Emoji.MusicalInstrument.Guitar, EmojiFlags.Specialty ),
+
+
 
         };
     }
