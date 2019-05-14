@@ -62,6 +62,14 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.PersonFantasy.SantaClaus, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Vampire, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Zombie, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.Ghost, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.AngryWithHorns, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.AlienMonster, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.Goblin, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.Ogre, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.Robot, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.Skull, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.FaceFantasy.SmilingWithHorns, EmojiFlags.Face ),
 
             new EmojiEntry( Emoji.Clothing.BalletShoes, EmojiFlags.Clothing | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Clothing.Coat, EmojiFlags.Clothing | EmojiFlags.Inventory ),
@@ -120,7 +128,8 @@ namespace FantasyCharacterBot
 
             new EmojiEntry( Emoji.SkyAndWeather.Fire, EmojiFlags.Sign | EmojiFlags.Likes ),
             new EmojiEntry( Emoji.SkyAndWeather.WaterWave, EmojiFlags.Sign | EmojiFlags.Likes | EmojiFlags.Home ),
-            new EmojiEntry( Emoji.Emotion.DashingAway, EmojiFlags.Sign | EmojiFlags.Likes ),
+            new EmojiEntry( Emoji.Emotion.DashingAway, EmojiFlags.Sign ),
+            new EmojiEntry( Emoji.FaceFantasy.SkullAndCrossbones, EmojiFlags.Sign ),
 
             new EmojiEntry( Emoji.Tool.BowAndArrow, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Tool.CrossedSwords, EmojiFlags.Specialty | EmojiFlags.Likes  | EmojiFlags.Inventory),
