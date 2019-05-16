@@ -28,33 +28,48 @@ namespace FantasyCharacterBot
 
         static string GetCharacterString()
         {
-            return String.Format(
+            string characterString = String.Format(
                 "Name: {0}\n"
                 + "Look:{1}{2}\n"
                 + "Sign:{3}\n"
-                + "Specialty:{4}\n"
-                + "Familiar:{5}\n"
-                + "Likes:{6}{7}{8}\n"
-                + "Dislikes:{9}{10}{11}\n"
-                + "Inventory:{12}{13}{14}{15}\n"
-                + "Home:{16}\n",
+                + "Specialty:{4}\n",
                 NameGenerator.GetFullName(),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Face),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Clothing),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Sign),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Specialty),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Familiar),
+                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Specialty));
+
+            Random rand = new Random();
+
+            if (rand.Next() % 2 == 0)
+            {
+                characterString += "Familiar:" + EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Familiar) + "\n";
+            }
+
+            characterString += String.Format(
+                "Likes:{0}{1}{2}\n"
+                + "Dislikes:{3}{4}{5}\n",
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Home));
+                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes));
+
+            int numInventoryItems = rand.Next(1,7);
+
+            characterString += "Inventory:";
+
+            for ( int inventoryItemIndex = 0; inventoryItemIndex < numInventoryItems; inventoryItemIndex++)
+            {
+                characterString += EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory);
+            }
+
+            characterString += "\n";
+
+            characterString += "Home:" + EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Home);
+
+            return characterString;
         }
 
         static void InitializeTwitterCredentials()
