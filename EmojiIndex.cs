@@ -365,6 +365,11 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.Medical.AdhesiveBandage, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Medical.Pill, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Medical.Stethoscope, EmojiFlags.Specialty),
+            
+            new EmojiEntry( Emoji.Money.Bag, EmojiFlags.Likes | EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Money.MoneyWithWings, EmojiFlags.Familiar),
+            
+            new EmojiEntry( Emoji.Music.Score, EmojiFlags.Specialty),
 
             new EmojiEntry( Emoji.OtherObjects.FuneralUrn, EmojiFlags.Inventory ),
 
