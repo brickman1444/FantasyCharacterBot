@@ -21,7 +21,14 @@ namespace FantasyCharacterBot
 
             Console.WriteLine("Beginning program");
 
-            Console.WriteLine(String.Format(
+            EmojiIndex.ValidateEntries();
+
+            Console.WriteLine(GetCharacterString());
+        }
+
+        static string GetCharacterString()
+        {
+            return String.Format(
                 "Name: {0}\n"
                 + "Look:{1}{2}\n"
                 + "Sign:{3}\n"
@@ -47,7 +54,7 @@ namespace FantasyCharacterBot
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Inventory),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Home) ));
+                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Home));
         }
 
         static void InitializeTwitterCredentials()

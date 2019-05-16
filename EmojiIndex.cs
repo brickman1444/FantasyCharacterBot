@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 using Emoji = Centvrio.Emoji;
 
@@ -30,6 +31,16 @@ namespace FantasyCharacterBot
             return selection.mEmoji.ToString();
         }
 
+        public static void ValidateEntries()
+        {
+            HashSet<Emoji.UnicodeString> emoji = new HashSet<Emoji.UnicodeString>();
+            foreach ( EmojiEntry entry in emojiIndex )
+            {
+                Debug.Assert(!emoji.Contains( entry.mEmoji));
+                emoji.Add(entry.mEmoji);
+            }
+        }
+
         class EmojiEntry
         {
             public EmojiEntry(Emoji.UnicodeString emoji, EmojiFlags flags)
@@ -56,6 +67,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.PersonRole.Prince, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonRole.Princess, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonRole.WomanHeadscarf, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonActivity.BunnyEars, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Merperson, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Elf, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.MrsClaus, EmojiFlags.Face ),
