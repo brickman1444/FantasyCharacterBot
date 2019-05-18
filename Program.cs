@@ -21,9 +21,12 @@ namespace FantasyCharacterBot
 
             Console.WriteLine("Beginning program");
 
+            InitializeTwitterCredentials();
+
             EmojiIndex.ValidateEntries();
 
-            Console.WriteLine(GetCharacterString());
+            //Console.WriteLine(GetCharacterString());
+            Tweet(GetCharacterString());
         }
 
         static string GetCharacterString()
@@ -93,10 +96,10 @@ namespace FantasyCharacterBot
             Tweetinvi.Auth.SetUserCredentials(consumerKey, consumerSecret, accessToken, accessTokenSecret);
         }
 
-        static void TweetQuote( string quote )
+        static void Tweet( string text )
         {
-            Console.WriteLine("Publishing tweet: " + quote);
-            var tweet = Tweetinvi.Tweet.PublishTweet(quote);
+            Console.WriteLine("Publishing tweet: " + text);
+            var tweet = Tweetinvi.Tweet.PublishTweet(text);
         }
     }
 }
