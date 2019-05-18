@@ -235,7 +235,7 @@ namespace FantasyCharacterBot
 
             new EmojiEntry( Emoji.Sport.FishingPole, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Sport.IceSkate, EmojiFlags.Likes | EmojiFlags.Inventory ),
-            new EmojiEntry( Emoji.Sport.MartialArtsUniform, EmojiFlags.Likes | EmojiFlags.Specialty ),
+            new EmojiEntry( Emoji.Sport.MartialArtsUniform, EmojiFlags.Likes | EmojiFlags.Specialty | EmojiFlags.Clothing ),
             new EmojiEntry( Emoji.FoodPrepared.Cooking, EmojiFlags.Likes | EmojiFlags.Specialty ),
 
             new EmojiEntry( Emoji.FoodAsian.BentoBox, EmojiFlags.Likes | EmojiFlags.Inventory ),
