@@ -67,7 +67,6 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.PersonRole.Prince, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonRole.Princess, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonRole.WomanHeadscarf, EmojiFlags.Face ),
-            new EmojiEntry( Emoji.PersonActivity.BunnyEars, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Merperson, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.Elf, EmojiFlags.Face ),
             new EmojiEntry( Emoji.PersonFantasy.MrsClaus, EmojiFlags.Face ),
