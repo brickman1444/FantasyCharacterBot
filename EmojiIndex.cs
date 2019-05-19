@@ -34,9 +34,9 @@ namespace FantasyCharacterBot
         public static void ValidateEntries()
         {
             HashSet<Emoji.UnicodeString> emoji = new HashSet<Emoji.UnicodeString>();
-            foreach ( EmojiEntry entry in emojiIndex )
+            foreach (EmojiEntry entry in emojiIndex)
             {
-                Debug.Assert(!emoji.Contains( entry.mEmoji));
+                Debug.Assert(!emoji.Contains(entry.mEmoji));
                 emoji.Add(entry.mEmoji);
             }
         }
@@ -220,7 +220,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.Tool.Shield, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Tool.Axe, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Tool.Pick, EmojiFlags.Specialty | EmojiFlags.Inventory ),
-            new EmojiEntry( Emoji.Tool.Toolbox, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Tool.Toolbox, EmojiFlags.Specialty | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Banjo, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Drum, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Saxophone, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
@@ -350,24 +350,106 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.Game.Kite, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Game.MahjongRedDragon, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Game.TeddyBear, EmojiFlags.Likes | EmojiFlags.Inventory | EmojiFlags.Familiar ),
-            
+
             new EmojiEntry( Emoji.Hotel.Luggage, EmojiFlags.Inventory ),
-            
+
             new EmojiEntry( Emoji.LightVideo.Candle, EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.LightVideo.DiyaLamp, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.LightVideo.GlassRight, EmojiFlags.Inventory | EmojiFlags.Specialty ),
             new EmojiEntry( Emoji.LightVideo.RedPaperLantern, EmojiFlags.Inventory),
-            
+
             new EmojiEntry( Emoji.Mail.Envelope, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Mail.Package, EmojiFlags.Inventory),
 
+            new EmojiEntry( Emoji.Tool.ProbingCane, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Medical.AdhesiveBandage, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Medical.Pill, EmojiFlags.Inventory),
-            new EmojiEntry( Emoji.Medical.Stethoscope, EmojiFlags.Specialty),
-            
+            new EmojiEntry( Emoji.Medical.Stethoscope, EmojiFlags.Inventory),
+
             new EmojiEntry( Emoji.Money.Bag, EmojiFlags.Likes | EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Money.MoneyWithWings, EmojiFlags.Familiar),
-            
+
+            new EmojiEntry( Emoji.Office.Briefcase, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.Clipboard, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.Paperclip, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.Pushpin, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.Scissors, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.SpiralCalendar, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.SpiralNotepad, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.StraightRuler, EmojiFlags.Inventory ),
+            new EmojiEntry( Emoji.Office.TriangularRuler, EmojiFlags.Inventory ),
+
+            new EmojiEntry( Emoji.OtherSymbols.Medical, EmojiFlags.Specialty),
+            new EmojiEntry( Emoji.OtherSymbols.Trident, EmojiFlags.Specialty | EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.PlaceBuilding.HouseWithGarden, EmojiFlags.Home),
+
+            new EmojiEntry( Emoji.PlaceMap.Compass, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.PlaceOther.HotSprings, EmojiFlags.Likes),
+
+            new EmojiEntry( Emoji.PlantFlower.Bouquet, EmojiFlags.Likes | EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.PlantFlower.CherryBlossom, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.PlantFlower.Hibiscus, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.PlantFlower.Rose, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.PlantFlower.Sunflower, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.PlantFlower.Tulip, EmojiFlags.Likes),
+
+            new EmojiEntry( Emoji.PlantOther.FourLeafClover, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.PlantOther.Herb, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.PlantOther.Seedling, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.Science.Alembic, EmojiFlags.Inventory | EmojiFlags.Specialty),
+            new EmojiEntry( Emoji.Science.Telescope, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.SkyAndWeather.ClosedUmbrella, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.SkyAndWeather.CloudWithLightningAndRain, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.SkyAndWeather.Fog, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.SkyAndWeather.Rainbow, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.SkyAndWeather.RingedPlanet, EmojiFlags.Home),
+            new EmojiEntry( Emoji.SkyAndWeather.Snowflake, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.SkyAndWeather.Snowman, EmojiFlags.Likes | EmojiFlags.Face),
+
+            new EmojiEntry( Emoji.Sound.Bell, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Sound.HighVolume, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.Sound.Muted, EmojiFlags.Likes),
+            new EmojiEntry( Emoji.Sound.PostalHorn, EmojiFlags.Inventory | EmojiFlags.Likes | EmojiFlags.Specialty),
+
+            new EmojiEntry( Emoji.Time.HourglassNotDone, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.TransportGround.ManualWheelchair, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.Writing.FountainPen, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Writing.Paintbrush, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Writing.Pencil, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.ArtsCrafts.ArtistPalette, EmojiFlags.Inventory | EmojiFlags.Specialty),
+            new EmojiEntry( Emoji.ArtsCrafts.PerformingArts, EmojiFlags.Specialty),
+            new EmojiEntry( Emoji.ArtsCrafts.Thread, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.ArtsCrafts.Yarn, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.AwardMedal.FirstPlace, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.AwardMedal.Military, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.AwardMedal.SecondPlace, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.AwardMedal.SportsMedal, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.AwardMedal.ThirdPlace, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.AwardMedal.Trophy, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.Body.FlexedBiceps, EmojiFlags.Specialty | EmojiFlags.Likes),
+
+            new EmojiEntry( Emoji.Computer.Abacus, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.Dishware.Amphora, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Dishware.Chopsticks, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Dishware.KitchenKnife, EmojiFlags.Inventory | EmojiFlags.Specialty),
+            new EmojiEntry( Emoji.Dishware.ForkAndKnife, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Dishware.Spoon, EmojiFlags.Inventory),
+
+            new EmojiEntry( Emoji.Emotion.Bomb, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Emotion.BrokenHeart, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Emotion.HeartWithArrow, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Emotion.LoveLetter, EmojiFlags.Inventory | EmojiFlags.Likes),
+            new EmojiEntry( Emoji.Emotion.Zzz, EmojiFlags.Likes),
+
             new EmojiEntry( Emoji.Music.Score, EmojiFlags.Specialty),
 
             new EmojiEntry( Emoji.OtherObjects.FuneralUrn, EmojiFlags.Inventory ),
@@ -393,7 +475,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.Clothing.GemStone, EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Clothing.Ring, EmojiFlags.Inventory ),
 
-            new EmojiEntry( Emoji.SkyAndWeather.Sun, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.SkyAndWeather.Sun, EmojiFlags.Home | EmojiFlags.Likes ),
             new EmojiEntry( Emoji.SkyAndWeather.CrescentMoon, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceOther.CircusTent, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceGeographic.BeachWithUmbrella, EmojiFlags.Home ),
