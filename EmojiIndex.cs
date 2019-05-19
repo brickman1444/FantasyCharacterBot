@@ -20,8 +20,11 @@ namespace FantasyCharacterBot
             Likes = 1 << 5,
             Inventory = 1 << 6,
             Home = 1 << 7,
-            HasSkinTone = 1 << 8
+            HasSkinTone = 1 << 8,
+            HasGender = 1 << 9
         }
+
+        static Emoji.UnicodeString ZWJ = 0x200D;
 
         public static string GetRandomEmoji(EmojiFlags flags)
         {
@@ -34,6 +37,17 @@ namespace FantasyCharacterBot
             if (selection.mFlags.HasFlag(EmojiFlags.HasSkinTone))
             {
                 outSequence.Add(GetRandomSkinTone(rand));
+            }
+
+            if (selection.mFlags.HasFlag(EmojiFlags.HasGender))
+            {
+                Emoji.UnicodeString? gender = GetRandomGender(rand);
+                if (gender != null)
+                {
+                    outSequence.Add(ZWJ);
+                    outSequence.Add(gender.Value);
+                    outSequence.Add(Emoji.VariationSelectors.VS16);
+                }
             }
 
             return outSequence.ToString();
@@ -50,6 +64,17 @@ namespace FantasyCharacterBot
                 Emoji.ModifierFitzpatrick.Type6,
             };
             return skinTones.ElementAt(rand.Next(skinTones.Count()));
+        }
+
+        public static Emoji.UnicodeString? GetRandomGender(Random rand)
+        {
+            IEnumerable<Emoji.UnicodeString?> genders = new Emoji.UnicodeString?[]
+            {
+                null,
+                Emoji.OtherSymbols.Male,
+                Emoji.OtherSymbols.Female
+            };
+            return genders.ElementAt(rand.Next(genders.Count()));
         }
 
         public static void ValidateEntries()
@@ -76,24 +101,24 @@ namespace FantasyCharacterBot
 
         static EmojiEntry[] emojiIndex = {
             new EmojiEntry( Emoji.Person.Man, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.Person.Adult, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
+            new EmojiEntry( Emoji.Person.Adult, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.Person.Woman, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Mage, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Fairy, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Genie, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonFantasy.Mage, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
+            new EmojiEntry( Emoji.PersonFantasy.Fairy, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
+            new EmojiEntry( Emoji.PersonFantasy.Genie, EmojiFlags.Face | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.CatFace.Grinning, EmojiFlags.Face ),
-            new EmojiEntry( Emoji.Person.OlderAdult, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
+            new EmojiEntry( Emoji.Person.OlderAdult, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.PersonRole.BeardedPerson, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonRole.PersonWearingTurban, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
+            new EmojiEntry( Emoji.PersonRole.PersonWearingTurban, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.PersonRole.Prince, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
             new EmojiEntry( Emoji.PersonRole.Princess, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
             new EmojiEntry( Emoji.PersonRole.WomanHeadscarf, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Merperson, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Elf, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
+            new EmojiEntry( Emoji.PersonFantasy.Merperson, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
+            new EmojiEntry( Emoji.PersonFantasy.Elf, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.PersonFantasy.MrsClaus, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
             new EmojiEntry( Emoji.PersonFantasy.SantaClaus, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Vampire, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
-            new EmojiEntry( Emoji.PersonFantasy.Zombie, EmojiFlags.Face ),
+            new EmojiEntry( Emoji.PersonFantasy.Vampire, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
+            new EmojiEntry( Emoji.PersonFantasy.Zombie, EmojiFlags.Face | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.FaceFantasy.Ghost, EmojiFlags.Face ),
             new EmojiEntry( Emoji.FaceFantasy.AngryWithHorns, EmojiFlags.Face ),
             new EmojiEntry( Emoji.FaceFantasy.Goblin, EmojiFlags.Face ),
