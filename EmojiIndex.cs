@@ -20,6 +20,7 @@ namespace FantasyCharacterBot
             Likes = 1 << 5,
             Inventory = 1 << 6,
             Home = 1 << 7,
+            HasSkinTone = 1 << 8
         }
 
         public static string GetRandomEmoji(EmojiFlags flags)
@@ -28,7 +29,27 @@ namespace FantasyCharacterBot
             IEnumerable<EmojiEntry> matches = emojiIndex.Where(e => e.mFlags.HasFlag(flags));
             EmojiEntry selection = matches.ElementAt(rand.Next(matches.Count()));
 
-            return selection.mEmoji.ToString();
+            Emoji.UnicodeSequence outSequence = new Emoji.UnicodeSequence(1);
+            outSequence.Add(selection.mEmoji);
+            if (selection.mFlags.HasFlag(EmojiFlags.HasSkinTone))
+            {
+                outSequence.Add(GetRandomSkinTone(rand));
+            }
+
+            return outSequence.ToString();
+        }
+
+        public static Emoji.UnicodeString GetRandomSkinTone(Random rand)
+        {
+            IEnumerable<Emoji.UnicodeString> skinTones = new Emoji.UnicodeString[]
+            {
+                Emoji.ModifierFitzpatrick.Type1,
+                Emoji.ModifierFitzpatrick.Type3,
+                Emoji.ModifierFitzpatrick.Type4,
+                Emoji.ModifierFitzpatrick.Type5,
+                Emoji.ModifierFitzpatrick.Type6,
+            };
+            return skinTones.ElementAt(rand.Next(skinTones.Count()));
         }
 
         public static void ValidateEntries()
