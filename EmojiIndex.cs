@@ -443,6 +443,7 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.PlantOther.FourLeafClover, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.PlantOther.Herb, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.PlantOther.Seedling, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.PlantOther.EvergreenTree, EmojiFlags.Home),
 
             new EmojiEntry( Emoji.Science.Alembic, EmojiFlags.Inventory | EmojiFlags.Specialty),
             new EmojiEntry( Emoji.Science.Telescope, EmojiFlags.Inventory),

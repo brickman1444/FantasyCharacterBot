@@ -20,8 +20,6 @@ namespace FantasyCharacterBot
             {
                 return GetName() + " " + GetEpithet();
             }
-
-            return GetName() + " " + GetName();
         }
 
         static string GetName()
