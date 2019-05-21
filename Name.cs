@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 
@@ -9,6 +10,17 @@ namespace FantasyCharacterBot
     {
         public static string GetFullName()
         {
+            Random rand = new Random();
+
+            if ( rand.Next() % 2 == 0)
+            {
+                return GetName() + " " + GetName();
+            }
+            else
+            {
+                return GetName() + " " + GetEpithet();
+            }
+
             return GetName() + " " + GetName();
         }
 
@@ -30,6 +42,12 @@ namespace FantasyCharacterBot
                 chain.Add(name);
             }
             return chain;
+        }
+
+        static string GetEpithet()
+        {
+            Random rand = new Random();
+            return epithets.ElementAt(rand.Next(epithets.Count()));
         }
 
         static string[] names = {
@@ -117,7 +135,98 @@ namespace FantasyCharacterBot
             "Westley",
             "Buttercup",
             "Starkiller",
-            "Black"
+            "Black",
+            "Bluetooth",
+            "Curtmantle",
+            "Greyfell",
+            "Lunalilo",
+        };
+
+        static string[] epithets = {
+            "the Able",
+            "the Accursed",
+            "the Affable",
+            "the Ambitious",
+            "the Ancient",
+            "the Beloved",
+            "the Bewitched",
+            "the Blessed",
+            "the Bold",
+            "the Boneless",
+            "the Brash",
+            "the Brave",
+            "the Broad-shouldered",
+            "the Capable",
+            "the Careless",
+            "the Candid",
+            "the Ceremonious",
+            "the Chaste",
+            "the Courteous",
+            "the Cruel",
+            "the Damned",
+            "the Desired",
+            "the Determined",
+            "the Elder",
+            "the Eloquent",
+            "the Enlightened",
+            "the Exile",
+            "the Fair",
+            "the Fearless",
+            "the Fortunate",
+            "from Outerseas",
+            "the Generous",
+            "the Gentle",
+            "the Good",
+            "of Good Memory",
+            "the Grim",
+            "the Hammer",
+            "the Hardy",
+            "the Hopeful",
+            "the Ill-Tempered",
+            "the Illustrious",
+            "the Indolent",
+            "the Invicible",
+            "the Just",
+            "the Kind-Hearted",
+            "the Last",
+            "the Learned",
+            "the Lover of Elegance",
+            "the Mad",
+            "the Magnanimous",
+            "the Memorable",
+            "the Merry",
+            "the Mild",
+            "the Mighty",
+            "the Noble",
+            "the Outlaw",
+            "the Peaceful",
+            "the Pilgrim",
+            "the Proud",
+            "the Prudent",
+            "the Purple-Born",
+            "the Quarreller",
+            "the Quiet",
+            "the Rash",
+            "the Reformer",
+            "the Righteous",
+            "the Sacrificer",
+            "of the Seven Parts",
+            "the Silent",
+            "the Spirited",
+            "the Strong",
+            "the Terrible",
+            "the Tough",
+            "the Treacherous",
+            "the Tremulous",
+            "the Unavoidable",
+            "the Unlucky",
+            "the Unready",
+            "the Vain",
+            "the Valiant",
+            "the Weak",
+            "the Wicked",
+            "the Wise",
+            "the Younger",
         };
     }
 }
