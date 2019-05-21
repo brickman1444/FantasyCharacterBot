@@ -25,7 +25,11 @@ namespace FantasyCharacterBot
 
             EmojiIndex.ValidateEntries();
 
-            //Console.WriteLine(GetCharacterString());
+            //for ( int i = 0; i < 20; i++)
+            //{
+            //    Console.WriteLine(GetCharacterString());
+            //}
+            
             Tweet(GetCharacterString());
         }
 
@@ -34,12 +38,10 @@ namespace FantasyCharacterBot
             string characterString = String.Format(
                 "Name: {0}\n"
                 + "Look:{1}{2}\n"
-                + "Sign:{3}\n"
-                + "Specialty:{4}\n",
+                + "Specialty:{3}\n",
                 NameGenerator.GetFullName(),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Face),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Clothing),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Sign),
                 EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Specialty));
 
             Random rand = new Random();
@@ -49,19 +51,31 @@ namespace FantasyCharacterBot
                 characterString += "Familiar:" + EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Familiar) + "\n";
             }
 
-            characterString += String.Format(
-                "Likes:{0}{1}{2}\n"
-                + "Dislikes:{3}{4}{5}\n",
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes),
-                EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes));
+            characterString += "Likes: ";
 
-            int numInventoryItems = rand.Next(1,7);
+            int numLikes = rand.Next(1,5);
+
+            for (int likeIndex = 0; likeIndex < numLikes; likeIndex++)
+            {
+                characterString += EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes);
+            }
+
+            characterString += "\n";
+
+            characterString += "Dislikes: ";
+
+            int numDislikes = rand.Next(1,5);
+
+            for (int dislikeIndex = 0; dislikeIndex < numLikes; dislikeIndex++)
+            {
+                characterString += EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes);
+            }
+
+            characterString += "\n";
 
             characterString += "Inventory:";
+
+            int numInventoryItems = rand.Next(1,7);
 
             for ( int inventoryItemIndex = 0; inventoryItemIndex < numInventoryItems; inventoryItemIndex++)
             {
