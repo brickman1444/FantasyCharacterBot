@@ -15,6 +15,16 @@ namespace FantasyCharacterBot
             return inputStream;
         }
 
+        public class CustomJsonLanguageConverter : Tweetinvi.Logic.JsonConverters.JsonLanguageConverter
+        {
+            public override object ReadJson( Newtonsoft.Json.JsonReader reader, Type objectType, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
+            {
+                return reader.Value != null
+                    ? base.ReadJson(reader, objectType, existingValue, serializer)
+                    : Tweetinvi.Models.Language.English;
+            }
+        }
+
         public static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -22,6 +32,9 @@ namespace FantasyCharacterBot
             Console.WriteLine("Beginning program");
 
             InitializeTwitterCredentials();
+
+            Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Remove(typeof(Tweetinvi.Models.Language));
+            Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Add(typeof(Tweetinvi.Models.Language), new CustomJsonLanguageConverter()); // your brand new json converter with workaround
 
             EmojiIndex.ValidateEntries();
 
