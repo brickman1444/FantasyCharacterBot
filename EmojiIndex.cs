@@ -276,11 +276,11 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.MusicalInstrument.MusicalKeyboard, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Trumpet, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.MusicalInstrument.Guitar, EmojiFlags.Specialty | EmojiFlags.Likes | EmojiFlags.Inventory ),
-            new EmojiEntry( Emoji.OtherSymbols.Sparkle, EmojiFlags.Specialty ),
 
             new EmojiEntry( Emoji.Sport.FishingPole, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Sport.IceSkate, EmojiFlags.Likes | EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.Sport.MartialArtsUniform, EmojiFlags.Likes | EmojiFlags.Specialty | EmojiFlags.Clothing ),
+            new EmojiEntry( Emoji.Sport.Pool8Ball, EmojiFlags.Inventory ),
             new EmojiEntry( Emoji.PersonSport.Fencing, EmojiFlags.Likes | EmojiFlags.Specialty ),
             new EmojiEntry( Emoji.PersonSport.PeopleWrestling, EmojiFlags.Likes | EmojiFlags.Specialty ),
             new EmojiEntry( Emoji.FoodPrepared.Cooking, EmojiFlags.Likes | EmojiFlags.Specialty ),
@@ -495,6 +495,7 @@ namespace FantasyCharacterBot
 
             new EmojiEntry( Emoji.Emotion.Bomb, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Emotion.BrokenHeart, EmojiFlags.Inventory),
+            new EmojiEntry( Emoji.Emotion.Dizzy, EmojiFlags.Specialty ),
             new EmojiEntry( Emoji.Emotion.HeartWithArrow, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.Emotion.LoveLetter, EmojiFlags.Inventory | EmojiFlags.Likes),
             new EmojiEntry( Emoji.Emotion.Zzz, EmojiFlags.Likes),

@@ -66,7 +66,7 @@ namespace FantasyCharacterBot
 
             characterString += "Likes: ";
 
-            int numLikes = rand.Next(1,5);
+            int numLikes = 2;
 
             for (int likeIndex = 0; likeIndex < numLikes; likeIndex++)
             {
@@ -77,9 +77,9 @@ namespace FantasyCharacterBot
 
             characterString += "Dislikes: ";
 
-            int numDislikes = rand.Next(1,5);
+            int numDislikes = 2;
 
-            for (int dislikeIndex = 0; dislikeIndex < numLikes; dislikeIndex++)
+            for (int dislikeIndex = 0; dislikeIndex < numDislikes; dislikeIndex++)
             {
                 characterString += EmojiIndex.GetRandomEmoji(EmojiIndex.EmojiFlags.Likes);
             }
@@ -88,7 +88,7 @@ namespace FantasyCharacterBot
 
             characterString += "Inventory:";
 
-            int numInventoryItems = rand.Next(1,7);
+            int numInventoryItems = rand.Next(2,4);
 
             for ( int inventoryItemIndex = 0; inventoryItemIndex < numInventoryItems; inventoryItemIndex++)
             {
