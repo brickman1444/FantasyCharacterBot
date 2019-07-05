@@ -36,8 +36,6 @@ namespace FantasyCharacterBot
             Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Remove(typeof(Tweetinvi.Models.Language));
             Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Add(typeof(Tweetinvi.Models.Language), new CustomJsonLanguageConverter()); // your brand new json converter with workaround
 
-            EmojiIndex.ValidateEntries();
-
             //for ( int i = 0; i < 20; i++)
             //{
             //    Console.WriteLine(GetCharacterString());

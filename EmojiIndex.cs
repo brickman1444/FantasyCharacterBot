@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics;
 
 using Emoji = Centvrio.Emoji;
 
@@ -75,16 +74,6 @@ namespace FantasyCharacterBot
                 Emoji.OtherSymbols.Female
             };
             return genders.ElementAt(rand.Next(genders.Count()));
-        }
-
-        public static void ValidateEntries()
-        {
-            HashSet<Emoji.UnicodeString> emoji = new HashSet<Emoji.UnicodeString>();
-            foreach (EmojiEntry entry in emojiIndex)
-            {
-                Debug.Assert(!emoji.Contains(entry.mEmoji));
-                emoji.Add(entry.mEmoji);
-            }
         }
 
         public class EmojiEntry
