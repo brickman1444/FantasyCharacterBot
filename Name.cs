@@ -48,7 +48,7 @@ namespace FantasyCharacterBot
             return epithets.ElementAt(rand.Next(epithets.Count()));
         }
 
-        static string[] names = {
+        public static readonly string[] names = {
             "Grignr",
             "Agafnd",
             "Zanilia",
@@ -162,7 +162,7 @@ namespace FantasyCharacterBot
             "Giong",
         };
 
-        static string[] epithets = {
+        public static readonly string[] epithets = {
             "the Able",
             "the Accursed",
             "the Affable",
