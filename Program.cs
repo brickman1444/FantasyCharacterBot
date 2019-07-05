@@ -35,6 +35,10 @@ namespace FantasyCharacterBot
             {
                 SampleNames();
             }
+            else if (args.Length != 0 && args[0] == "sample-characters")
+            {
+                SampleCharacters();
+            }
             else
             {
                 GenerateCharacterAndTweet();
@@ -46,12 +50,7 @@ namespace FantasyCharacterBot
             InitializeTwitterCredentials();
 
             Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Remove(typeof(Tweetinvi.Models.Language));
-            Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Add(typeof(Tweetinvi.Models.Language), new CustomJsonLanguageConverter()); // your brand new json converter with workaround
-
-            //for ( int i = 0; i < 20; i++)
-            //{
-            //    Console.WriteLine(GetCharacterString());
-            //}
+            Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Add(typeof(Tweetinvi.Models.Language), new CustomJsonLanguageConverter());
             
             Tweet(GetCharacterString());
         }
@@ -144,6 +143,14 @@ namespace FantasyCharacterBot
             for (int i = 0; i < 50; i++)
             {
                 Console.WriteLine(NameGenerator.GetFullName());
+            }
+        }
+
+        static void SampleCharacters()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine(GetCharacterString() + "\n");
             }
         }
     }
