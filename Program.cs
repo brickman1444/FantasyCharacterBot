@@ -31,6 +31,18 @@ namespace FantasyCharacterBot
 
             Console.WriteLine("Beginning program");
 
+            if (args.Length != 0 && args[0] == "sample-names")
+            {
+                SampleNames();
+            }
+            else
+            {
+                GenerateCharacterAndTweet();
+            }
+        }
+
+        static void GenerateCharacterAndTweet()
+        {
             InitializeTwitterCredentials();
 
             Tweetinvi.Logic.JsonConverters.JsonPropertyConverterRepository.JsonConverters.Remove(typeof(Tweetinvi.Models.Language));
@@ -125,6 +137,14 @@ namespace FantasyCharacterBot
         {
             Console.WriteLine("Publishing tweet: " + text);
             var tweet = Tweetinvi.Tweet.PublishTweet(text);
+        }
+
+        static void SampleNames()
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine(NameGenerator.GetFullName());
+            }
         }
     }
 }
