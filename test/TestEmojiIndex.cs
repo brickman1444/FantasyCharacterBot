@@ -5,7 +5,7 @@ namespace FantasyCharacterBot
 {
     public static class TestEmojiIndex
     {
-        class EmojiEntryByKeyComparer : IEqualityComparer<EmojiIndex.EmojiEntry>
+        public class EmojiEntryByKeyComparer : IEqualityComparer<EmojiIndex.EmojiEntry>
         {
             public bool Equals(EmojiIndex.EmojiEntry a, EmojiIndex.EmojiEntry b)
             {
