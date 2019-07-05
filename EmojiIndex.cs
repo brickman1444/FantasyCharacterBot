@@ -419,8 +419,6 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.OtherSymbols.Medical, EmojiFlags.Specialty),
             new EmojiEntry( Emoji.OtherSymbols.Trident, EmojiFlags.Specialty | EmojiFlags.Inventory),
 
-            new EmojiEntry( Emoji.PlaceBuilding.HouseWithGarden, EmojiFlags.Home),
-
             //new EmojiEntry( Emoji.PlaceMap.Compass, EmojiFlags.Inventory),
             new EmojiEntry( Emoji.PlaceOther.HotSprings, EmojiFlags.Likes),
 
@@ -526,6 +524,8 @@ namespace FantasyCharacterBot
             new EmojiEntry( Emoji.PlaceBuilding.Castle, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceBuilding.JapaneseCastle, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceBuilding.DerelictHouse, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.House, EmojiFlags.Home ),
+            new EmojiEntry( Emoji.PlaceBuilding.HouseWithGarden, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceBuilding.Building, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceOther.MilkyWay, EmojiFlags.Home ),
             new EmojiEntry( Emoji.PlaceOther.Tent, EmojiFlags.Home ),
