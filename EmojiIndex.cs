@@ -87,7 +87,7 @@ namespace FantasyCharacterBot
             }
         }
 
-        class EmojiEntry
+        public class EmojiEntry
         {
             public EmojiEntry(Emoji.UnicodeString emoji, EmojiFlags flags)
             {
@@ -99,7 +99,7 @@ namespace FantasyCharacterBot
             public readonly EmojiFlags mFlags;
         }
 
-        static EmojiEntry[] emojiIndex = {
+        public static readonly EmojiEntry[] emojiIndex = {
             new EmojiEntry( Emoji.Person.Man, EmojiFlags.Face | EmojiFlags.HasSkinTone ),
             new EmojiEntry( Emoji.Person.Adult, EmojiFlags.Face | EmojiFlags.HasSkinTone | EmojiFlags.HasGender ),
             new EmojiEntry( Emoji.Person.Woman, EmojiFlags.Face | EmojiFlags.HasSkinTone ),

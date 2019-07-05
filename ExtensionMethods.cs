@@ -9,5 +9,10 @@ namespace FantasyCharacterBot
         {
             return enumerable.Count() != enumerable.Distinct().Count();
         }
+        
+        public static bool HasDuplicateEntries<T>( this IEnumerable<T> enumerable, IEqualityComparer<T> comparer )
+        {
+            return enumerable.Count() != enumerable.Distinct( comparer ).Count();
+        }
     }
 }

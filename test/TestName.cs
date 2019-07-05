@@ -8,13 +8,13 @@ namespace FantasyCharacterBot
         [Fact]
         public void AllNamesAreUnique()
         {
-            Assert.False( NameGenerator.names.HasDuplicateEntries() );
+            Assert.False(NameGenerator.names.HasDuplicateEntries());
         }
 
         [Fact]
         public void AllEpithetsAreUnique()
         {
-            Assert.False( NameGenerator.epithets.HasDuplicateEntries() );
+            Assert.False(NameGenerator.epithets.HasDuplicateEntries());
         }
     }
 }
